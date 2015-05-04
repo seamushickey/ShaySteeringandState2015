@@ -191,7 +191,7 @@ public class SteeringBehaviours1 : MonoBehaviour {
 		Vector3 desiredVel = target.transform.position - transform.position; //same as Seek and Flee
 		float distance = desiredVel.magnitude; //find the distance between agent and target
 		float lookAhead = distance / maxSpeed; //we want to add a bit of distance onto the position we track, so we divide distance by maxSpeed ensuring it always scales as they change
-		Vector3 desPos = target.transform.position+(lookAhead * target.GetComponent<SteeringBehaviours>().velocity); //our final vector, we tell our agent to Seek the targets position with the added lookAhead value, multiplied by the targets velocity, so that the look ahead can always be calculated in the correct direction
+		Vector3 desPos = target.transform.position+(lookAhead * target.GetComponent<SteeringBehaviours1>().velocity); //our final vector, we tell our agent to Seek the targets position with the added lookAhead value, multiplied by the targets velocity, so that the look ahead can always be calculated in the correct direction
 		return Seek (desPos); //we return our vector to Seek, which then runs the normal Seek code
 	}
 	
